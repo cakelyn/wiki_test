@@ -1,9 +1,8 @@
-$("#toggleResults").hide();
-$("#x1").hide();
-$("#x2").hide();
-
 $("document").ready(function(){
-  
+  $("#toggleResults").hide();
+  $("#x1").hide();
+  $("#x2").hide();
+
   $("#input").click(function(){
     $("#tail").hide();
     $(this).data("animateToggle", 2).animate({
@@ -14,7 +13,7 @@ $("document").ready(function(){
     $("#x1").delay(300).show(10);
     $("#x2").delay(300).show(10);
   });
-  
+
   $("#x").click(function(){
     $("#x1").hide();
     $("#x2").hide();
@@ -28,7 +27,7 @@ $("document").ready(function(){
     $("h3").show();
     $("input").val("");
   });
-  
+
   $("input").keypress(function(e){
     if (e.which == 13){
       event.preventDefault();
@@ -44,9 +43,7 @@ $("document").ready(function(){
       }).done(function(response){
         printAPIdata(response);
       });
-    }
-    
-    
+    } 
   });
 });
 
